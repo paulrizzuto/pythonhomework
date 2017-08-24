@@ -8,7 +8,7 @@ txtpath = os.path.join('..', '..', '08-01-2017-NB-Class-Repository-DATA', '02-Ho
 
 with open(txtpath, 'r') as txtfile:
     filecontents = txtfile.read()
-    sentences = re.split(r'[\.\?\!][\s\"]',str(filecontents))
+    sentences = re.split(r'\S{3,}\.\s|\S{3,}\!\s|\S{3,}\?\s|\S{3,}\.\"\s',str(filecontents))
 
 average = len(filecontents.split())/len(sentences)   
     
